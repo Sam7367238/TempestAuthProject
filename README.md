@@ -1,10 +1,10 @@
 <p align="center">
   <a href="https://tempestphp.com">
-    <img src="https://raw.githubusercontent.com/tempestphp/.github/refs/heads/main/.github/tempest-logo.svg" width="100" />
+    <img src="https://github.com/tempestphp/.github/raw/refs/heads/main/logo_current/tempest-logo.png" width="100" />
   </a>
 </p>
 
-<h1 align="center">Authentication Project</h1>
+<h1 align="center">Tempest</h1>
 <div align="center">
-  This is a Tempest proejct with authentication.
+  This is a Tempest framework project with authentication, it's mostly a practice project.
 </div>
