@@ -8,13 +8,8 @@ use Tempest\Http\Session\Session;
 
 use function Tempest\get;
 
-/** @var Authenticator $authenticator */
-$authenticator = get(Authenticator::class);
-
 /** @var Session $session */
 $session = get(Session::class);
-
-$user = $authenticator->current();
 
 ?>
 
@@ -31,6 +26,8 @@ $user = $authenticator->current();
     <nav>
         <a :if="!$user" href="/register">Register</a> | 
         <a :if="!$user" href="/login">Login</a> | 
+
+        <p :isset="$user">Good morning, {{ $user -> username }}</p>
 
         <form :isset="$user" method="post" action="/logout">
             <x-csrf-token/>
