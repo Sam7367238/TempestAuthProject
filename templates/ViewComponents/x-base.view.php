@@ -3,7 +3,6 @@
  * @var null|string $title The webpage's title
  */
 
-use Tempest\Auth\Authentication\Authenticator;
 use Tempest\Http\Session\Session;
 
 use function Tempest\get;

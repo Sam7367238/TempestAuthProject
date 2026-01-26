@@ -1,9 +1,5 @@
 <?php
 
-use App\Controller\SessionController;
-
-use function Tempest\Router\uri;
-
 ?>
 
 <x-base title="Register">
