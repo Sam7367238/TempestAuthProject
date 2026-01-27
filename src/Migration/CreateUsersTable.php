@@ -1,15 +1,15 @@
 <?php
 
-namespace Migrations;
+namespace App\Migration;
 
 use Tempest\Database\MigratesUp;
 use Tempest\Database\QueryStatement;
 use Tempest\Database\QueryStatements\CreateTableStatement;
 use Tempest\DateTime\DateTime;
 
-class CreateUserTable implements MigratesUp
+class CreateUsersTable implements MigratesUp
 {
-    public string $name = '2025-1-24_create_users_table';
+    public string $name = '2026-1-24_create_users_table';
 
     public function up(): QueryStatement
     {

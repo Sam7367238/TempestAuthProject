@@ -1,6 +1,6 @@
 <?php
 
-use App\Controller\SessionController;
+use App\Controller\RegistrationController;
 
 use function Tempest\Router\uri;
 
@@ -9,7 +9,7 @@ use function Tempest\Router\uri;
 <x-base title="Register">
     <h1>Register</h1>
 
-    <x-form :action="uri([SessionController::class, 'processRegisterForm'])">
+    <x-form :action="uri([RegistrationController::class, 'processRegisterForm'])">
         <x-input name="username" type="text" label="Username"/>
         <x-input name="password" type="password" label="Password"/>
 
