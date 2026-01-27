@@ -23,10 +23,12 @@ $session = get(Session::class);
 </head>
 <body>
     <nav>
-        <a :if="!$user" href="/register">Register</a> | 
-        <a :if="!$user" href="/login">Login</a> | 
+        <a href="/">Home</a>
 
-        <p :isset="$user">Good morning, {{ $user -> username }}</p>
+        <div :if="!$user">
+            <a href="/register">Register</a>
+            <a href="/login">Login</a>
+        </div> 
 
         <form :isset="$user" method="post" action="/logout">
             <x-csrf-token/>
