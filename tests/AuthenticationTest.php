@@ -19,9 +19,6 @@ final class AuthenticationTest extends IntegrationTestCase
         $this->database->setup();
     }
 
-    /**
-     * 
-     */
     #[Test]
     public function test_registration_is_successful_and_in_the_database(): void
     {
