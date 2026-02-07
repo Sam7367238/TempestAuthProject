@@ -8,10 +8,10 @@
 <div align="center">
     This is a Tempest framework project with authentication, and you can customize it however you want!
     
-    ## Installation
+    Installation:
 
     composer install
 
-    ## Notes
+    Notes:
     This won't get updated until Tempest version 3 unless it's urgent.
 </div>
