@@ -10,9 +10,7 @@
     
     ## Installation
 
-    ```bash
     composer install
-    ```
 
     ## Notes
     This won't get updated until Tempest version 3 unless it's urgent.
