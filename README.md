@@ -10,7 +10,9 @@
     
 Installation:
 
-- composer install
+```
+composer installl
+```
 
 Notes:
 This won't get updated until Tempest version 3 unless it's urgent.
