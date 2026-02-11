@@ -1,0 +1,10 @@
+validation_error:
+  has_length: |
+    .input {$field :string}
+    يجب ان يكون بين {$min :number} الى {$max :number} احرف.
+flash:
+  username_taken: اسم المستخدم ليس متوفر
+  register_success: تم تسجيل الدخول
+  invalid_credentials: البيانات ليس صحيحة
+  login_successful: تم تسجيل الدخول
+  logout_successful: تم تسجيل الخروج

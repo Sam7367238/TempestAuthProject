@@ -10,6 +10,7 @@ use Tempest\Auth\Authentication\Authenticator;
 use Tempest\Cryptography\Password\PasswordHasher;
 use Tempest\Http\Response;
 use Tempest\Http\Responses\Redirect;
+use Tempest\Intl\Translator;
 use Tempest\Router\Get;
 use Tempest\Router\Post;
 use Tempest\View\View;
@@ -22,7 +23,8 @@ final readonly class SessionController
     public function __construct(
         private PasswordHasher $passwordHasher,
         private Authenticator $authenticator,
-        private UserRepository $userRepository
+        private UserRepository $userRepository,
+        private Translator $translator
     ) {}
 
     #[Get('/login', middleware: [Guest::class])]
@@ -37,12 +39,12 @@ final readonly class SessionController
         $user = $this->userRepository->findByUsername($request->username);
 
         if (!$user || $this->passwordHasher->verify($request->password, $user->password)) {
-            return new Redirect('/login')->flash('status', 'Invalid Credentials');
+            return new Redirect('/login')->flash('status', $this->translator->translate('flash.invalid_credentials'));
         }
 
         $this->authenticator->authenticate($user);
 
-        return new Redirect('/')->flash('status', 'Logged In Successfully');
+        return new Redirect('/')->flash('status', $this->translator->translate('flash.login_successful'));
     }
 
     #[Post('/logout', middleware: [Authenticated::class])]
@@ -50,6 +52,6 @@ final readonly class SessionController
     {
         $this->authenticator->deauthenticate();
 
-        return new Redirect('/login')->flash('status', 'Logged Out Successfully');
+        return new Redirect('/login')->flash('status', $this->translator->translate('flash.logout_successful'));
     }
 }

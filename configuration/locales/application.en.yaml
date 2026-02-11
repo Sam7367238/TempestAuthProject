@@ -1,0 +1,10 @@
+validation_error:
+  has_length: |
+    .input {$field :string}
+    This must be between {$min :number} to {$max :number} characters.
+flash:
+  username_taken: This username is taken.
+  register_success: Registration successful.
+  invalid_credentials: Invalid credentials.
+  login_successful: Logged In Successfully.
+  logout_successful: Logged Out Successfully.
